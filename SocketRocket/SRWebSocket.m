@@ -306,7 +306,7 @@ static __strong NSData *CRLFCRLF;
         NSString *scheme = [_url scheme];
         
         assert([scheme isEqualToString:@"ws"] || [scheme isEqualToString:@"http"] || [scheme isEqualToString:@"wss"] || [scheme isEqualToString:@"https"]);
-        _urlRequest = request;
+        _urlRequest = [request retain];
         
         if ([scheme isEqualToString:@"wss"] || [scheme isEqualToString:@"https"]) {
             _secure = YES;
