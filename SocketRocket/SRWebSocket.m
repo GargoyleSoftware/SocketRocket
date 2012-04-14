@@ -351,6 +351,8 @@ static __strong NSData *CRLFCRLF;
     
     dispatch_release(_callbackQueue);
     dispatch_release(_workQueue);
+
+    [super dealloc];
 }
 
 #ifndef NDEBUG
